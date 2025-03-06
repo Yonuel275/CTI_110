@@ -22,8 +22,7 @@ class Car:
     def show_stats(self, miles_to_win):
         print(f"{self.driver}'s car advanced {self.miles_driven}")
         print()
-        if self.miles_driven > 100:
-            print(f"{self.driver} won the race!!!")
+        
 
     def hit_maxwell(self):
         hit = random.randint(1,3)
@@ -66,7 +65,11 @@ def main():
         muskCar.hit_maxwell()
         bezosCar.hit_maxwell()
 
+    if muskCar.miles_driven > bezosCar.miles_driven:
+        print("Musk Car Won the race")
+    
+    if muskCar.miles_driven < bezosCar.miles_driven:
+        print("Bezos Car Won the race")
 
 if __name__ == "__main__":
     main()
-
